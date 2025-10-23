@@ -1,0 +1,52 @@
+.footer {
+  background-color: #2b0830;
+  color: white;
+  padding: 3rem 2rem 1rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-socials a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #df8908;
+}
+
+.footer hr {
+  border: none;
+  height: 1px;
+  background-color: #444;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+.footer-copy {
+  font-size: 0.875rem;
+  color: #aaa;
+}

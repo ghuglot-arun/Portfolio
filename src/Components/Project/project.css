@@ -1,0 +1,105 @@
+.projects {
+  padding: 4rem 2rem;
+    background-color: #f8fafc;
+  color: #1f1f1f;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.projects-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  z-index: 2;
+  position: relative;
+}
+
+.projects-title img {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #f3f1f1;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.project-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  background: linear-gradient(270deg, #df8908, #b415ff);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.project-links a:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+  .projects-title h1 {
+    font-size: 2rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .project-links a {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}

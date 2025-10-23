@@ -1,0 +1,126 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #0f172a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li:hover {
+  color: #38bdf8;
+}
+
+.nav-connect {
+  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+  color: #0f172a;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* ---------------- Mobile Responsive ---------------- */
+
+/* Hamburger icon hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+/* Rotate animation when open */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Desktop-only helper */
+.desktop-only {
+  display: block;
+}
+
+/* Tablet & below */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 64px; /* height of navbar */
+    right: 0;
+    background: #0f172a;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    gap: 1.5rem;
+    padding: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-menu.active {
+    max-height: 300px; /* enough to reveal items */
+    padding: 1.5rem 0;
+  }
+
+  .nav-connect.desktop-only {
+    display: none; /* hide big button on small screens */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 1.2rem;
+  }
+  .nav-menu li {
+    font-size: 0.95rem;
+  }
+}
