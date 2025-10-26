@@ -1,4 +1,4 @@
-import './Project.css'
+import './project.css'
 import theme_pattern from '../../assets/theme_pattern.svg'
 import project1 from '../../assets/project1.png'
 import project2 from '../../assets/project2.png'
